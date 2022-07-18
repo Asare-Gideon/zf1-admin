@@ -18,7 +18,11 @@
 		<span>
 			<ion-icon class="text-xl pt-2" name="search-outline" />
 		</span>
-		<input class="w-full p-3 outline-none bg-slate-50" type="text" placeholder="search...." />
+		<input
+			class="w-full p-3 outline-none border-none bg-slate-50"
+			type="text"
+			placeholder="search...."
+		/>
 	</div>
 	<div class="flex items-center">
 		<a href="#" class="hover:text-orange-400">

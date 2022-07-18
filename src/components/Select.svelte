@@ -1,101 +1,98 @@
-<!-- This example requires Tailwind CSS v2.0+ -->
-<div>
-	<label id="listbox-label" class="block text-sm font-medium text-gray-700"> Assigned to </label>
-	<div class="mt-1 relative">
-		<button
-			type="button"
-			class="relative w-full bg-white border border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-			aria-haspopup="listbox"
-			aria-expanded="true"
-			aria-labelledby="listbox-label"
-		>
-			<span class="flex items-center">
-				<img
-					src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-					alt=""
-					class="flex-shrink-0 h-6 w-6 rounded-full"
-				/>
-				<span class="ml-3 block truncate"> Tom Cook </span>
-			</span>
-			<span class="ml-3 absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
-				<!-- Heroicon name: solid/selector -->
-				<svg
-					class="h-5 w-5 text-gray-400"
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 20 20"
-					fill="currentColor"
-					aria-hidden="true"
-				>
-					<path
-						fill-rule="evenodd"
-						d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-						clip-rule="evenodd"
-					/>
-				</svg>
-			</span>
-		</button>
+<script type="ts">
+	//@ts ignore
+	import { filterArr } from '../store/globalVariables';
+	export let data;
+	let toggle = false;
+	let firstValue = data[0].title;
 
-		<!--
-      Select popover, show/hide based on select state.
+	const handleSelect = (id: string, e: Event, item: any) => {
+		firstValue = item.title;
+		toggle = !toggle;
+		e.preventDefault();
+		let newData = filterArr(id, data);
+		data = newData;
+	};
+	const clearInput = () => {
+		firstValue = '';
+	};
+	let typingValue;
+</script>
 
-      Entering: ""
-        From: ""
-        To: ""
-      Leaving: "transition ease-in duration-100"
-        From: "opacity-100"
-        To: "opacity-0"
-    -->
-		<ul
-			class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-56 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
-			tabindex="-1"
-			role="listbox"
-			aria-labelledby="listbox-label"
-			aria-activedescendant="listbox-option-3"
-		>
-			<!--
-        Select option, manage highlight styles based on mouseenter/mouseleave and keyboard navigation.
+<div class="max-w-md mx-auto">
+	<div class="relative">
+		<div class="h-10 bg-slate-800 flex border border-slate-800 rounded items-center">
+			<input
+				name="select"
+				id="select"
+				class="px-4 appearance-none outline-none  bg-slate-800 h-full text-gray-50 w-full"
+				checked
+				bind:value={firstValue}
+			/>
 
-        Highlighted: "text-white bg-indigo-600", Not Highlighted: "text-gray-900"
-      -->
-			<li
-				class="text-gray-900 cursor-default select-none relative py-2 pl-3 pr-9"
-				id="listbox-option-0"
-				role="option"
+			<button
+				on:click={(e) => {
+					clearInput();
+				}}
+				class="cursor-pointer outline-none focus:outline-none transition-all text-gray-300 hover:text-gray-600"
 			>
-				<div class="flex items-center">
-					<img
-						src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-						alt=""
-						class="flex-shrink-0 h-6 w-6 rounded-full"
-					/>
-					<!-- Selected: "font-semibold", Not Selected: "font-normal" -->
-					<span class="font-normal ml-3 block truncate"> Wade Cooper </span>
-				</div>
+				<svg
+					class="w-4 h-4 mx-2 fill-current"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				>
+					<line x1="18" y1="6" x2="6" y2="18" />
+					<line x1="6" y1="6" x2="18" y2="18" />
+				</svg>
+			</button>
+			<label
+				for="show_more"
+				class="cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-300 hover:text-gray-600"
+			>
+				<svg
+					class="w-4 h-4 mx-2 fill-current"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				>
+					<polyline points="18 15 12 9 6 15" />
+				</svg>
+			</label>
+		</div>
 
-				<!--
-          Checkmark, only display for selected option.
-
-          Highlighted: "text-white", Not Highlighted: "text-indigo-600"
-        -->
-				<span class="text-indigo-600 absolute inset-y-0 right-0 flex items-center pr-4">
-					<!-- Heroicon name: solid/check -->
-					<svg
-						class="h-5 w-5"
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 20 20"
-						fill="currentColor"
-						aria-hidden="true"
+		<input
+			type="checkbox"
+			name="show_more"
+			id="show_more"
+			class="hidden"
+			on:click={() => {
+				toggle = !toggle;
+			}}
+		/>
+		<div
+			class={`absolute rounded shadow bg-slate-800 overflow-hidden ${
+				toggle ? 'flex' : 'hidden'
+			} flex-col w-full mt-1 border border-slate-800`}
+		>
+			{#each data as item}
+				<div
+					class="cursor-pointer group border-t bg-slate-900"
+					on:click={(e) => handleSelect(item.id, e, item)}
+				>
+					<a
+						class={`block p-2 border-transparent ${
+							item.selected ? 'border-blue-600' : ''
+						} border-l-4 text-slate-50 group-hover:border-blue-600 group-hover:bg-slate-700`}
+						>{item.title}</a
 					>
-						<path
-							fill-rule="evenodd"
-							d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-							clip-rule="evenodd"
-						/>
-					</svg>
-				</span>
-			</li>
-
-			<!-- More items... -->
-		</ul>
+				</div>
+			{/each}
+		</div>
 	</div>
 </div>

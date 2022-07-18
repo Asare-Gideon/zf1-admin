@@ -1,24 +1,53 @@
-## Admin section
+# Admin section
 
 # Create Roles
 
---Will be able to do data entry, checking and changing
---Accounts
--- Rates (CBM , Currency)
+## --Will be able to do data entry, checking and changing
 
-## marketers section
+### Adding container
 
---Share links
---Register customers
---Check rate and income earned
+##### -container number
 
-## Shopping Agent
+##### -Loading date
 
---Will be able to share links for people to register through it.
---Will be able to register clients
+##### -Container rate
 
-## Users
+### Adding client shipments details to container
 
---Check shipments
---check bills and payments
---Track shipmensts
+##### -Shipping mark(can search for it)
+
+##### -add description
+
+##### -add tracking
+
+##### -add CBM
+
+##### -add quantity
+
+##### -add rate
+
+## --Will be able to add an Accounts
+
+## --Will be able to add Rates (CBM , Currency)
+
+# marketers section
+
+## --Share links
+
+## --Register customers
+
+## --Check rate and income earned
+
+# Shopping Agent
+
+## --Will be able to share links for people to register through it.
+
+## --Will be able to register clients
+
+# Users
+
+## --Check shipments
+
+## --check bills and payments
+
+## --Track shipmensts

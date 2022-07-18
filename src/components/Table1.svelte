@@ -1,20 +1,53 @@
-<script>
-	let tableData = {
-		tableHeader: ['Shipping Mark', 'Name', 'email', 'phone Number'],
-		tableContent: [
-			{
-				id: '1',
-				text: ['GDE339499', 'Asare Gideon', 'asaredampale@gmail.com', '0554433453']
-			},
-			{
-				id: '2',
-				text: ['DBE339499', 'Yaw Fish', 'fisheredampale@gmail.com', '0554433453']
-			}
-		]
+<script type="ts">
+	import { goto } from '$app/navigation';
+
+	//@ts ignore
+	// itemMtheod and the headerMethod can take link or a method
+	interface tableProp {
+		itemText?: string;
+		headerText?: string;
+		itemMethod: (() => void) | string;
+		headerMethod: (() => void) | string;
+		tableHeader: string[];
+		tableContent: {
+			id: string;
+			text: string[];
+		}[];
+	}
+
+	export /**
+* @type {{
+	itemText?: string
+	headerText?: string
+	itemMethod: (() => void) | string;
+	headerMethod: (() => void) | string;
+	tableHeader: string[];
+	tableContent: {
+		id: string;
+		text: string[];
+	}[];
+}
+}
+*/
+	let tableData: tableProp;
+
+	const handleHeaderMethod = (): void => {
+		if (typeof tableData.headerMethod === 'string') {
+			goto(tableData.headerMethod);
+		} else {
+			tableData.headerMethod();
+		}
+	};
+	const handleItemMehtod = (): void => {
+		if (typeof tableData.itemMethod === 'string') {
+			goto(tableData.itemMethod);
+		} else {
+			tableData.itemMethod();
+		}
 	};
 </script>
 
-<div class="w-[97%] mx-auto">
+<div class="w-full mx-auto">
 	<div class="flex flex-col">
 		<div class="overflow-x-auto shadow-md sm:rounded-lg">
 			<div class="inline-block min-w-full align-middle">
@@ -41,8 +74,14 @@
 									</th>
 								{/each}
 
-								<th scope="col" class="p-4 -mr-8">
-									<span class="text-blue-600 dark:text-blue-500 hover:underline">Msg all</span>
+								<th
+									scope="col"
+									class="p-4 cursor-pointer  flex justify-end"
+									on:click={() => handleHeaderMethod()}
+								>
+									<span class="text-blue-600 dark:text-blue-500 hover:underline"
+										>{tableData.headerText ? tableData.headerText : 'MSG ALL'}</span
+									>
 								</th>
 							</tr>
 						</thead>
@@ -66,7 +105,14 @@
 										>
 									{/each}
 									<td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-										<a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">msg</a>
+										<a
+											on:click={() => {
+												handleItemMehtod();
+											}}
+											href={typeof tableData.itemMethod === 'string' ? tableData.itemMethod : '#'}
+											class="text-blue-600 cursor-pointer dark:text-blue-500 hover:underline"
+											>{tableData.itemText ? tableData.itemText : 'View'}</a
+										>
 									</td>
 								</tr>
 							{/each}

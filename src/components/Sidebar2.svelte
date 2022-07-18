@@ -1,7 +1,6 @@
 <script type="ts">
 	import { goto } from '$app/navigation';
 	import { sideBarToggle } from '../store/globalVariables';
-
 	let items = [
 		{
 			id: '1',
@@ -19,10 +18,10 @@
 		},
 		{
 			id: '3',
-			title: 'Dashboard',
+			title: 'Containers',
 			selected: false,
-			iconName: 'people-outline',
-			link: '#'
+			iconName: 'bookmarks',
+			link: '/containers'
 		},
 		{
 			id: '4',
@@ -31,7 +30,6 @@
 			iconName: 'people-outline'
 		}
 	];
-
 	function handleClick(id: String, e: Event) {
 		e.preventDefault();
 		let newitems = items.map((item) => {
@@ -56,12 +54,14 @@
 	<div
 		class={`sidebar min-h-screen ${
 			$sideBarToggle ? 'w-[3.35rem]' : 'w-56'
-		} overflow-hidden border-r hover:w-56 hover:bg-slate-800 hover:shadow-lg`}
+		} overflow-hidden border-r  hover:bg-slate-800 hover:shadow-lg`}
 	>
-		<div class="flex h-screen flex-col justify-between pt-2 pb-6">
-			<div>
-				<div class="w-max p-2.5">
-					<img src="/images/logo3.png" class="w-32" alt="" />
+		<div class="flex h-screen flex-col justify-between  pb-6">
+			<div class="">
+				<div class="w-full bg-slate-700 py-1">
+					<div class="w-max p-2.5">
+						<img src="/images/logo3.png" class="w-32" alt="" />
+					</div>
 				</div>
 				<ul class="mt-6 space-y-2 tracking-wide">
 					{#each items as item}
@@ -77,7 +77,7 @@
 								} px-4 py-3 `}
 							>
 								<ion-icon
-									class="text-xl text-white group-hover:text-orange-400 "
+									class={`text-xl text-white ${item.selected ? '' : 'group-hover:text-orange-400'}`}
 									name={item.iconName}
 								/>
 								<span class="-mr-1 font-medium text-white group-hover:text-slate-50"
