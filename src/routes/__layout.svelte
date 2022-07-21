@@ -6,7 +6,7 @@
 	let isLogIn = true;
 </script>
 
-<div>
+<div class="bg-slate-900">
 	{#if isLogIn}
 		<div class="flex">
 			<Sidebar2 />

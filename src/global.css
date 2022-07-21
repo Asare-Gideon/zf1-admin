@@ -10,7 +10,9 @@ body {
 	overflow: hidden;
 	transition: all 1s ease-in-out;
 }
-
+input:focus {
+	color: orange !important;
+}
 .contentCont {
 	overflow-y: scroll !important;
 }

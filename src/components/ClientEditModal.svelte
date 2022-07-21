@@ -56,27 +56,34 @@
 								class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
 							>
 								<tr>
-									<th scope="col" class="py-3 px-6">Shipping Mark </th>
-									<th scope="col" class="py-3 px-6"> Description </th>
-									<th scope="col" class="py-3 px-6">China Tracking</th>
-									<th scope="col" class="py-3 px-6"> CBM </th>
+									<th scope="col" class="py-3 px-6">Description</th>
+									<th scope="col" class="py-3 px-6">China Tracking </th>
+									<th scope="col" class="py-3 px-6">CBM</th>
 									<th scope="col" class="py-3 px-6"> Quantity </th>
-									<th scope="col" class="py-3 px-6"> Rate </th>
+									<th scope="col" class="py-3 px-6">Rate </th>
+									<th scope="col" class="py-3 px-6">Total </th>
 									<th scope="col" class="py-3 px-6">New</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-800">
-									<th
-										scope="row"
-										class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-										>DDF34455</th
-									>
+								<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
 									<td class="py-4 px-6">shoes, blenders etc</td>
 									<td class="py-4 px-6">45544</td>
 									<td class="py-4 px-6">3.44</td>
 									<td class="py-4 px-6">5</td>
 									<td class="py-4 px-6">3.3</td>
+									<td class="py-4 px-6">50</td>
+									<td class="py-4 px-6">
+										<button class="text-blue-700 outlingInput px-3 py-1 rounded-sm ">Edit</button>
+									</td>
+								</tr>
+								<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+									<td class="py-4 px-6">shoes, blenders etc</td>
+									<td class="py-4 px-6">45544</td>
+									<td class="py-4 px-6">3.44</td>
+									<td class="py-4 px-6">5</td>
+									<td class="py-4 px-6">3.3</td>
+									<td class="py-4 px-6">30</td>
 									<td class="py-4 px-6">
 										<button class="text-blue-700 outlingInput px-3 py-1 rounded-sm text-slate-50"
 											>Edit</button
@@ -84,43 +91,6 @@
 									</td>
 								</tr>
 								<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-800">
-									<th
-										scope="row"
-										class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-										>DDF34455</th
-									>
-									<td class="py-4 px-6">shoes, blenders etc</td>
-									<td class="py-4 px-6">45544</td>
-									<td class="py-4 px-6">3.44</td>
-									<td class="py-4 px-6">5</td>
-									<td class="py-4 px-6">3.3</td>
-									<td class="py-4 px-6">
-										<button class="text-blue-700 outlingInput px-3 py-1 rounded-sm text-slate-50"
-											>Edit</button
-										>
-									</td>
-								</tr>
-								<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-800">
-									<th
-										scope="row"
-										class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-									>
-										<div class="relative z-0 mb-0 w-full group">
-											<input
-												value="DDF34455"
-												type="text"
-												name="floating_phone"
-												id="floating_phone"
-												class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-												placeholder=" "
-											/>
-											<label
-												for="floating_phone"
-												class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-												>Shipping mark</label
-											>
-										</div>
-									</th>
 									<td class="py-4 px-6">
 										<div class="relative z-0 mb-0 w-full group">
 											<input
@@ -198,6 +168,22 @@
 												for="floating_phone"
 												class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
 												>Enter Rating</label
+											>
+										</div>
+									</td>
+									<td class="py-4 px-6 ">
+										<div class="relative z-0 mb-0 w-full group">
+											<input
+												type="text"
+												name="floating_phone"
+												id="floating_phone"
+												class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+												placeholder=" "
+											/>
+											<label
+												for="floating_phone"
+												class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+												>Total</label
 											>
 										</div>
 									</td>

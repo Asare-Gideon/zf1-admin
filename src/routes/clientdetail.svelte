@@ -26,7 +26,7 @@
 
 <div class="w-[90%] md:w-full flex justify-center p-5">
 	<div class="w-full md:w-[95%]">
-		<h1 class="md:text-2xl text-lg mb-3 text-gray-600">Client Detials</h1>
+		<h1 class="md:text-2xl text-lg dark:text-slate-50 mb-3 text-gray-600">Client Detials</h1>
 		<div class="flex justify-between flex-wrap flex-col md:flex-row">
 			<div class="flex items-center ml-3 mt-3 md:px-10 px-2 md:py-3 py-2 bg-slate-800 rounded-md">
 				<ion-icon class="md:text-2xl text-lg text-orange-400" name="person" />
