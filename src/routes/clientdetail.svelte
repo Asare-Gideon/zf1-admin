@@ -28,22 +28,30 @@
 	<div class="w-full md:w-[95%]">
 		<h1 class="md:text-2xl text-lg dark:text-slate-50 mb-3 text-gray-600">Client Detials</h1>
 		<div class="flex justify-between flex-wrap flex-col md:flex-row">
-			<div class="flex items-center ml-3 mt-3 md:px-10 px-2 md:py-3 py-2 bg-slate-800 rounded-md">
+			<div
+				class="flex items-center ml-3 mt-3 md:px-10 px-2 md:py-3 py-2 bg-slate-50 dark:bg-slate-800 rounded-md"
+			>
 				<ion-icon class="md:text-2xl text-lg text-orange-400" name="person" />
-				<h3 class="md:text-lg text-sm text-slate-50 ml-3">Asare Gideon</h3>
+				<h3 class="md:text-lg text-sm dark:text-slate-50 ml-3">Asare Gideon</h3>
 			</div>
-			<div class="flex items-center md:px-10 px-2 ml-3 mt-3 md:py-3 py-2 bg-slate-800 rounded-md">
+			<div
+				class="flex items-center md:px-10 px-2 ml-3 mt-3 md:py-3 py-2 bg-slate-50 dark:bg-slate-800 rounded-md"
+			>
 				<ion-icon class="md:text-2xl text-lg text-orange-400" name="mail" />
-				<h3 class="md:text-lg text-sm text-slate-50 ml-3">asaredampale@gmail.com</h3>
+				<h3 class="md:text-lg text-sm dark:text-slate-50 ml-3">asaredampale@gmail.com</h3>
 			</div>
-			<div class="flex items-center ml-3 mt-3 md:px-10 px-2 md:py-3 py-2 bg-slate-800 rounded-md">
+			<div
+				class="flex items-center ml-3 mt-3 md:px-10 px-2 md:py-3 py-2 bg-slate-50 dark:bg-slate-800 rounded-md"
+			>
 				<ion-icon class="md:text-2xl text-lg text-orange-400" name="bookmark" />
-				<h3 class="md:text-lg text-sm text-slate-50 ml-3">AD4005400</h3>
+				<h3 class="md:text-lg text-sm dark:text-slate-50 ml-3">AD4005400</h3>
 			</div>
 
-			<div class="flex ml-3 mt-3 items-center md:px-10 px-2 md:py-3 py-2 bg-slate-800 rounded-md">
+			<div
+				class="flex ml-3 mt-3 items-center md:px-10 px-2 md:py-3 py-2 bg-slate-50 dark:bg-slate-800 rounded-md"
+			>
 				<ion-icon class="md:text-2xl text-lg text-orange-400" name="call" />
-				<h3 class="md:text-lg text-sm text-slate-50 ml-3">05554483944</h3>
+				<h3 class="md:text-lg text-sm dark:text-slate-50 ml-3">05554483944</h3>
 			</div>
 		</div>
 		<div class="mt-5">

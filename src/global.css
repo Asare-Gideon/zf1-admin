@@ -21,7 +21,9 @@ input:focus {
 }
 ::-webkit-scrollbar {
 	width: 8px;
-	background-color: #111827;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #7d5100;
 }
 ion-icon {
 	visibility: visible !important;

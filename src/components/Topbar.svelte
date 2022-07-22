@@ -1,5 +1,5 @@
 <script type="ts">
-	import { sideBarToggle } from '../store/globalVariables';
+	import { setDark, sideBarToggle } from '../store/globalVariables';
 
 	let newToggle = $sideBarToggle;
 
@@ -8,6 +8,11 @@
 		newToggle = !$sideBarToggle;
 		e.preventDefault();
 		sideBarToggle.set(newToggle);
+	};
+
+	const handleTheme = () => {
+		let current = $setDark;
+		setDark.set(!current);
 	};
 </script>
 
@@ -19,14 +24,20 @@
 			<ion-icon class="text-xl dark:text-slate-50 pt-2" name="search-outline" />
 		</span>
 		<input
-			class="w-full p-3 outline-none active:outline-none focus:ring-0 focus:outline-none ring-0 border-none dark:bg-slate-800 bg-slate-50"
+			class="w-full p-3 outline-none active:outline-none focus:ring-0 focus:outline-none  ring-0 border-none dark:bg-slate-800 bg-slate-50"
 			type="text"
 			placeholder="search...."
 		/>
 	</div>
 	<div class="flex items-center">
-		<a href="#" class="hover:text-orange-400 mr-3 dark:text-slate-50">
-			<ion-icon class="text-2xl " name="sunny" />
+		<a
+			on:click={() => {
+				handleTheme();
+			}}
+			href="#"
+			class="hover:text-orange-400 mr-3 dark:text-slate-50"
+		>
+			<ion-icon class="text-2xl " name={$setDark ? 'sunny' : 'moon'} />
 		</a>
 		<a href="#" class="hover:text-orange-400 dark:text-slate-50">
 			<ion-icon class="text-2xl " name="notifications-outline" />

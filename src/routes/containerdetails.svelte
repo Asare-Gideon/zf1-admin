@@ -50,7 +50,7 @@
 
 <div class="flex flex-col items-center">
 	<div class=" w-[95%] py-4  flex justify-between ">
-		<h1 class="text-2xl text-gray-600 ">DD4455322</h1>
+		<h1 class="text-2xl font-bold text-gray-600 ">DD4455322</h1>
 		<div>
 			<Select {data} />
 		</div>

@@ -25,9 +25,10 @@
 		},
 		{
 			id: '4',
-			title: 'Rate',
+			title: 'Roles',
 			selected: false,
-			iconName: 'people-outline'
+			iconName: 'medal',
+			link: '/roles'
 		}
 	];
 	function handleClick(id: String, e: Event) {

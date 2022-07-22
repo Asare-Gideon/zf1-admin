@@ -18,3 +18,5 @@ export function filterArr(id: String, items: any) {
 	});
 	return newitems;
 }
+
+export let setDark = writable(true);

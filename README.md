@@ -16,7 +16,7 @@
 
 ##### -Shipping mark(can search for it)
 
-##### -add description
+##### -add a description
 
 ##### -add tracking
 

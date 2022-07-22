@@ -20,11 +20,13 @@
 
 <div class="max-w-md mx-auto">
 	<div class="relative">
-		<div class="h-10 bg-slate-800 flex border border-slate-800 rounded items-center">
+		<div
+			class="h-10 dark:bg-slate-800 flex border bg-slate-50 border-slate-50 dark:border-slate-800 rounded items-center"
+		>
 			<input
 				name="select"
 				id="select"
-				class="px-4 appearance-none outline-none  bg-slate-800 h-full text-gray-50 w-full"
+				class="px-4 appearance-none outline-none bg-slate-50  dark:bg-slate-800 h-full dark:text-gray-50 w-full"
 				checked
 				bind:value={firstValue}
 			/>
