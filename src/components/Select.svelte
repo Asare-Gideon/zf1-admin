@@ -1,5 +1,5 @@
 <script type="ts">
-	//@ts ignore
+	//@ts-nocheck
 	import { filterArr } from '../store/globalVariables';
 	export let data;
 	let toggle = false;

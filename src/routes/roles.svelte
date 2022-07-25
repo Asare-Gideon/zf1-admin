@@ -29,10 +29,10 @@
 
 <div class="px-5 py-3">
 	<h1 class="dark:text-slate-50 text-2xl font-bold">Create Roles</h1>
-	<h3 class="dark:text-slate-50 mt-3 text-lg font-serif text-black font-semibold">
+	<h3 class="dark:text-slate-50 mt-3 text-md md:text-lg font-serif text-black font-semibold">
 		Grant permission on general level.
 	</h3>
-	<p class="font-mono text-lg dark:text-slate-50">
+	<p class="font-mono text-sm md:text-lg dark:text-slate-50">
 		there are several default roles defined, but you can define your own according to your needs.
 	</p>
 
@@ -65,7 +65,9 @@
 								class="text-2xl dark:text-slate-50 sm:text-3xl leading-none font-bold text-gray-900"
 								>{role.roleName}</span
 							>
-							<h3 class="text-base mt-2 dark:text-slate-50 font-normal w-[80%] text-gray-500">
+							<h3
+								class="text-base mt-2 dark:text-slate-50 font-normal md:w-[75%]  w-[45%] text-gray-500"
+							>
 								{role.description}
 							</h3>
 						</div>

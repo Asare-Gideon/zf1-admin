@@ -17,12 +17,28 @@
 			link: '/clients'
 		},
 		{
+			id: '3ddfee',
+			title: 'Admins',
+			selected: false,
+			iconName: 'barcode',
+			link: '/admins'
+		},
+
+		{
 			id: '3',
 			title: 'Containers',
 			selected: false,
 			iconName: 'bookmarks',
 			link: '/containers'
 		},
+		{
+			id: '3ee',
+			title: 'Rate',
+			selected: false,
+			iconName: 'pulse',
+			link: '/rate'
+		},
+
 		{
 			id: '4',
 			title: 'Roles',
