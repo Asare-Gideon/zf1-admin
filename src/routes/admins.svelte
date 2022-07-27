@@ -37,8 +37,8 @@
 </script>
 
 <div class="flex flex-col items-center">
-	<div class=" w-[95%] py-4  flex justify-between ">
-		<h1 class="text-2xl font-bold dark:text-slate-50 text-gray-600">ADMINS</h1>
+	<div class=" sm:w-[95%] py-4 w-full p-3 flex sm:justify-between flex-col sm:flex-row ">
+		<h1 class="text-2xl font-bold dark:text-slate-50 mb-8   sm:ml-0 text-gray-600">ADMINS</h1>
 		<div>
 			<Select {data} />
 		</div>

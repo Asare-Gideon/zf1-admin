@@ -1,10 +1,10 @@
-<div class="md:p-5 p-2 flex flex-col items-center">
+<div class="md:p-5 p-2 flex flex-col items-center pb-14 md:pb-5">
 	<h1
 		class="text-2xl text-center font-bold dark:text-slate-50 text-gray-600 ml-[-60px] md:mb-20 mb-10"
 	>
 		Assign Rates
 	</h1>
-	<div class="w-[76%] pl-2 pb-3">
+	<div class="w-[76%] sm:pl-2 pb-3">
 		<label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
 			>Select Rate</label
 		>
@@ -18,7 +18,7 @@
 	</div>
 	<div class="flex justify-center w-[94%]">
 		<form
-			class=" ml-2 mr-[-10px] md:ml-0 w-full shadow-md md:w-[80%] bg-white p-5 rounded-md dark:bg-[#000222]"
+			class=" ml-0 mr-[5-px] md:ml-0 w-full shadow-md md:w-[80%] sm:bg-white  p-5 rounded-md sm:dark:bg-[#000222]"
 		>
 			<div class="grid  w-[100%] gap-6 mb-6 md:grid-cols-2">
 				<div>

@@ -1,20 +1,107 @@
 <script type="ts">
 	// @ts-nocheck
-	import { sideBarToggle } from '../store/globalVariables';
+	import { setDark, sideBarToggle } from '../store/globalVariables';
 	import { onMount } from 'svelte';
+	import StatisticsCard from '../components/StatisticsCard.svelte';
+	import SocialActivities from '../components/SocialActivities.svelte';
+	import Transactions from '../components/Transactions.svelte';
+	import TodoList from '../components/TodoList.svelte';
 
 	onMount(() => {
 		FusionCharts.ready(function () {
 			var chartObj = new FusionCharts({
-				type: 'line',
-				renderAt: 'chart-container',
-				width: '93%',
+				type: 'column2d',
+				renderAt: 'barChart-container',
+				width: '100%',
 				height: '390',
 				dataFormat: 'json',
 				dataSource: {
 					chart: {
-						bgColor: '#222',
-						canvasbgColor: '#111',
+						bgColor: $setDark ? '#1f2937' : '#effffff',
+						canvasbgColor: '#fb8931',
+						caption: 'Monthly revenue for last year',
+						subCaption: "Harry's SuperMart",
+						xAxisName: 'Month',
+						yAxisName: 'Revenues (In USD)',
+						numberPrefix: '$',
+						theme: 'fusion'
+					},
+					data: [
+						{
+							label: 'Jan',
+							value: '420000'
+						},
+						{
+							label: 'Feb',
+							value: '810000'
+						},
+						{
+							label: 'Mar',
+							value: '720000'
+						},
+						{
+							label: 'Apr',
+							value: '550000'
+						},
+						{
+							label: 'May',
+							value: '910000'
+						},
+						{
+							label: 'Jun',
+							value: '510000'
+						},
+						{
+							label: 'Jul',
+							value: '680000'
+						},
+						{
+							label: 'Aug',
+							value: '620000'
+						},
+						{
+							label: 'Sep',
+							value: '610000'
+						},
+						{
+							label: 'Oct',
+							value: '490000'
+						},
+						{
+							label: 'Nov',
+							value: '900000'
+						},
+						{
+							label: 'Dec',
+							value: '730000'
+						}
+					],
+					trendlines: [
+						{
+							line: [
+								{
+									startvalue: '700000',
+									valueOnRight: '1',
+									displayvalue: 'Monthly Target'
+								}
+							]
+						}
+					]
+				}
+			});
+			chartObj.render();
+		});
+		FusionCharts.ready(function () {
+			var chartObj = new FusionCharts({
+				type: 'line',
+				renderAt: 'chart-container',
+				width: '100%',
+				height: '390',
+				dataFormat: 'json',
+				dataSource: {
+					chart: {
+						bgColor: $setDark ? '#1f2937' : '#effffff',
+						canvasbgColor: '#fb8931',
 						theme: 'fusion',
 						caption: 'can be anything',
 						subCaption: 'Last week',
@@ -66,7 +153,7 @@
 							line: [
 								{
 									startvalue: '18500',
-									color: '#fb8931',
+									color: '#1f2937',
 									displayvalue: 'Average{br}weekly{br}footfall',
 									valueOnRight: '1',
 									thickness: '2'
@@ -81,109 +168,23 @@
 	});
 </script>
 
-<div class="w-full flex flex-col items-center px-5  pt-3">
+<div class="w-full flex flex-col items-center sm:px-5 px-0 pb-5 pt-3">
 	<div class="w-full">
-		<h1 class="mt-1 mb-3 font-bold text-slate-600 dark:text-slate-50 pl-2 text-3xl ">Analytices</h1>
+		<h1 class="mt-1 mb-3 font-bold text-slate-600 dark:text-slate-50 pl-3 text-3xl ">Analytics</h1>
 	</div>
-	<div class="" id="chart-container" />
-	<div class="w-full my-3">
-		<div class="mt-4 w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-			<div
-				class="bg-white dark:bg-[#000222] hover:scale-105 shadow cursor-pointer rounded-lg p-4 sm:p-6 xl:p-8 "
-			>
-				<div class="flex items-center">
-					<div class="flex-shrink-0">
-						<span
-							class="text-2xl dark:text-slate-50 sm:text-3xl leading-none font-bold text-gray-900"
-							>2,340</span
-						>
-						<h3 class="text-base dark:text-slate-50 font-normal text-gray-500">
-							New products this week
-						</h3>
-					</div>
-					<div
-						class="ml-5 w-0 flex items-center justify-end flex-1 text-green-500 text-base font-bold"
-					>
-						14.6%
-						<svg
-							class="w-5 h-5"
-							fill="currentColor"
-							viewBox="0 0 20 20"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								fill-rule="evenodd"
-								d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z"
-								clip-rule="evenodd"
-							/>
-						</svg>
-					</div>
-				</div>
-			</div>
-			<div
-				class="bg-white hover:scale-105 dark:bg-[#000222] shadow cursor-pointer rounded-lg p-4 sm:p-6 xl:p-8 "
-			>
-				<div class="flex items-center">
-					<div class="flex-shrink-0">
-						<span
-							class="text-2xl dark:text-slate-50 sm:text-3xl leading-none font-bold text-gray-900"
-							>5,355</span
-						>
-						<h3 class="text-base dark:text-slate-50 font-normal text-gray-500">
-							Visitors this week
-						</h3>
-					</div>
-					<div
-						class="ml-5 w-0 flex items-center justify-end flex-1 text-green-500 text-base font-bold"
-					>
-						32.9%
-						<svg
-							class="w-5 h-5"
-							fill="currentColor"
-							viewBox="0 0 20 20"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								fill-rule="evenodd"
-								d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z"
-								clip-rule="evenodd"
-							/>
-						</svg>
-					</div>
-				</div>
-			</div>
-			<div
-				class="bg-white hover:scale-105 dark:bg-[#000222] shadow rounded-lg  cursor-pointer p-4 sm:p-6 xl:p-8 "
-			>
-				<div class="flex items-center">
-					<div class="flex-shrink-0">
-						<span
-							class="text-2xl sm:text-3xl leading-none font-bold dark:text-slate-50 text-gray-900"
-							>385</span
-						>
-						<h3 class="text-base font-normal dark:text-slate-50 text-gray-500">
-							User signups this week
-						</h3>
-					</div>
-					<div
-						class="ml-5 w-0 flex items-center justify-end flex-1 text-red-500 text-base font-bold"
-					>
-						-2.7%
-						<svg
-							class="w-5 h-5"
-							fill="currentColor"
-							viewBox="0 0 20 20"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								fill-rule="evenodd"
-								d="M14.707 12.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l2.293-2.293a1 1 0 011.414 0z"
-								clip-rule="evenodd"
-							/>
-						</svg>
-					</div>
-				</div>
-			</div>
-		</div>
+	<div class="grid w-full grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 p-4 gap-2">
+		<div class="w-full" id="chart-container" />
+		<SocialActivities />
 	</div>
+	<StatisticsCard />
+
+	<!-- Transaction cont -->
+	<div class="grid w-full grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 p-4 gap-2">
+		<Transactions />
+		<div class="w-full mt-4 ml-2" id="barChart-container" />
+	</div>
+
+	<!-- Task Summaries -->
+	<TodoList />
+	<!-- End of Task Summaries -->
 </div>

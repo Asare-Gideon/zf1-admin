@@ -19,9 +19,9 @@
 </script>
 
 <div class="max-w-md mx-auto">
-	<div class="relative">
+	<div class="relative w-[19rem]">
 		<div
-			class="h-10 dark:bg-slate-800 flex border bg-slate-50 border-slate-50 dark:border-slate-800 rounded items-center"
+			class="h-10  dark:bg-slate-800 flex border bg-slate-50 border-slate-50 dark:border-slate-800 rounded items-center"
 		>
 			<input
 				name="select"

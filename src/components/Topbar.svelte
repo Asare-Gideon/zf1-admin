@@ -53,8 +53,8 @@
 			class="hover:text-orange-400 dark:text-slate-50"
 		>
 			<ion-icon
-				class="text-2xl ml-4 "
-				name={$sideBarToggle ? 'arrow-forward-circle-outline' : 'arrow-back-circle-outline'}
+				class="text-2xl ml-4 hidden sm:block "
+				name={newToggle ? 'arrow-forward-circle-outline' : 'arrow-back-circle-outline'}
 			/>
 		</a>
 	</div>

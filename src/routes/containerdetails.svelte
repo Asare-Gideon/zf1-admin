@@ -49,13 +49,13 @@
 </script>
 
 <div class="flex flex-col items-center">
-	<div class=" w-[95%] py-4  flex justify-between ">
-		<h1 class="text-2xl font-bold text-gray-600 ">DD4455322</h1>
+	<div class=" flex justify-between flex-wrap mt-3 flex-col md:flex-row  w-full md:w-[95%] px-2">
+		<h1 class="text-2xl dark:text-slate-50 mb-3 text-gray-600">DD4455322</h1>
 		<div>
 			<Select {data} />
 		</div>
 	</div>
-	<div class="w-[95%] flex self-center">
+	<div class="w-[95%] flex self-center mt-5">
 		<Table1 {tableData} />
 	</div>
 	<AddClientModal {isToggled} handleIsToggled={handleViewDetail} />

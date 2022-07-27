@@ -71,7 +71,7 @@
 	<div
 		class={`sidebar min-h-screen ${
 			$sideBarToggle ? 'w-[3.35rem]' : 'w-56'
-		} overflow-hidden border-r dark:border-slate-800  hover:bg-slate-800 hover:shadow-lg`}
+		} overflow-hidden border-r dark:border-slate-800 transition-all ease-out duration-500 hover:bg-slate-800 hover:shadow-lg`}
 	>
 		<div class="flex h-screen flex-col justify-between  pb-6">
 			<div class="">

@@ -13,10 +13,10 @@
 	<div
 		id="defaultModal"
 		tabindex="-1"
-		class="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center flex"
+		class="overflow-y-auto overflow-x-hidden h-full fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center flex"
 		role="dialog"
 	>
-		<div class="bg-black absolute left-0 top-0 right-0 bottom-0 opacity-70" />
+		<div class="bg-black absolute left-0 h-full top-0 right-0 bottom-0 opacity-70" />
 		<div
 			class="animate__animated animate__bounceIn relative p-4 w-full max-w-[90%] h-full md:h-auto"
 		>

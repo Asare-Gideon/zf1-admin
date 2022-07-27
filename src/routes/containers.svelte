@@ -44,7 +44,7 @@
 </script>
 
 <div class="flex flex-col items-center">
-	<div class=" w-[95%] py-4 md:flex-row flex-col text-center mb-4 md:mb-0 flex justify-between ">
+	<div class=" w-[95%] py-4 md:flex-row flex-col  mb-1 md:mb-0 flex justify-between ">
 		<h1 class=" text-2xl font-bold dark:text-slate-50 text-gray-600 ">CONTAINERS</h1>
 		<div class="md:mt-0 mt-4">
 			<Select {data} />

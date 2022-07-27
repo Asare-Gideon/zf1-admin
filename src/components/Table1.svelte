@@ -47,7 +47,7 @@
 	};
 </script>
 
-<div class="w-full mx-auto">
+<div class=" pr-4 sm:pr-0 w-full mx-auto">
 	<div class="flex flex-col">
 		<div class="overflow-x-auto shadow-md sm:rounded-lg">
 			<div class="inline-block min-w-full align-middle">
@@ -87,7 +87,12 @@
 						</thead>
 						<tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
 							{#each tableData.tableContent as content}
-								<tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
+								<tr
+									class="hover:bg-gray-100 dark:hover:bg-gray-700"
+									on:click={() => {
+										handleItemMehtod();
+									}}
+								>
 									<td class="p-4 w-4">
 										<div class="flex items-center">
 											<input
